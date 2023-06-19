@@ -189,55 +189,13 @@ spec:
     - group: footer
       label: 页脚
       formSchema:
-        - $formkit: select
-          name: style
-          id: style
-          key: style
-          label: 页脚风格
-          value: style_1
-          options:
-            - label: 风格一
-              value: style_1
-            - label: 风格二
-              value: style_2
-
-        - $formkit: attachment
-          name: logo
-          label: Logo
-          help: 如果不设置，将使用站点设置的 Logo
-
-        - $formkit: text
-          name: title
-          label: 标题
-          help: 如果不设置，将使用站点设置的标题
 
         - $formkit: textarea
           rows: 3
           name: slogan
           id: slogan
-          key: slogan
-          if: "$get(style).value === style_2"
+          key: slogan        
           label: 标语
-
-        - $formkit: menuRadio
-          if: "$get(style).value === style_1"
-          name: menu
-          id: menu
-          key: menu
-          label: 右侧菜单
-
-        - $formkit: repeater
-          if: "$get(style).value === style_2"
-          name: menus
-          id: menus
-          key: menus
-          label: 菜单组
-          value: []
-          children:
-            - $formkit: menuRadio
-              name: name
-              label: 菜单
-              validation: "required"
 
         - $formkit: repeater
           name: social_media
