@@ -40,7 +40,7 @@
   <div
     th:if="${theme.config.layout.content_header} and ${not #strings.isEmpty(cover)}"
     class="h-96 bg-cover bg-center bg-no-repeat"
-    th:style="'background-image: url('+${cover}+')'"
+    th:style="'background-image: url(\''+${cover}+'\')'"
   >
     <div class="container mx-auto flex h-full flex-col items-center justify-center gap-3 py-6">
       <span class="text-5xl text-white" th:text="${title}"></span>
